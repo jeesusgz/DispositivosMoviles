@@ -7,7 +7,7 @@ class Aquiarium(length: Int = 100, width: Int = 20, height: Int = 40) {
 
     var volume: Int
         get() = width * height * lenght / 1000
-        private set(value) {
+        set(value) {
             height = (value * 1000) / (width * height)
         }
 
