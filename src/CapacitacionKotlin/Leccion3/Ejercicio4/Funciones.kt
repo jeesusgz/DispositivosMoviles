@@ -3,7 +3,11 @@ package CapacitacionKotlin.Leccion3.Ejercicio4
 import java.util.Random
 
 
-fun main() {
+fun main(args : Array<String>) {
+    print("Argumentos de entrada al main: ")
+    args.forEach {
+        print("$it, ")
+    }
     feedTheFish()
 }
 
@@ -30,3 +34,4 @@ fun fishFood(day : String) : String {
     }
     return food
 }
+

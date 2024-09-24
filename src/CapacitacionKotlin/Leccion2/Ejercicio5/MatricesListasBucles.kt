@@ -10,7 +10,22 @@ fun main() {
 
     //Modificable
     val myList = mutableListOf("tuna", "salmon", "shark")
+    myList.add(myList.size - 1,"sardina")
+    myList.add(myList.lastIndex,"boquerones")
+    println(myList)
     println(myList.remove("shark"))
+
+    print("Los pescados en la lista son: ")
+    for ((i,e) in myList.withIndex()){
+        if (i == myList.lastIndex - 1){
+            print("$e y ")
+        }else if (i == myList.lastIndex){
+            print("$e. ")
+        }else{
+            print("$e,")
+        }
+    }
+
 
     //Paso 2 matrices
     val colegio = arrayOf("shark", "salmon", "minnow")
@@ -79,4 +94,12 @@ fun main() {
     repeat(2){
         println("A fish is swimming")
     }
+
+    //prueba de clase
+    println("Los elementos de la lista son: ")
+    school.forEach{
+        println("$it, ")
+    }
+
+
 }
